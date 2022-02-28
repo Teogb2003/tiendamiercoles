@@ -1,36 +1,21 @@
-//ENTRADAS DEL PROBLEMA (comentario de linea)
+//Controlando etiquetas
 
-/*
-
-esto es 
-un
-Comentario de bloque
-*/
-
-//ENTRADAS==VARIABLES==CONSTANTES
-let nombreProducto='figura_Goku'
-let precioProducto=400000
-let pesoProducto=17.5
-let tieneDescuento=true
-let descripcionProducto="Figura de acción de goku"
-let telefonoVendedor="3017296775"
-
-const NOMBRE_CLIENTE="arley"
+//1. crear una variable para guardar una etiqueta
+let etiquetaTitulo = document.getElementById("titulo")
+console.log(etiquetaTitulo)
 
 
-//Arreglos unidimensionales (vectores)
-//Sirven para almacenar muchos elementos en una sola variable
-let productos=["figura_goku","gorra","camiseta","dragon morral"]
-let productos2=Array("figura_goku","gorra","camiseta","dragon morral")
+//controlando el menu
+let etiquetaMenu = document.getElementById("menu")
 
+//2. como modificar el texto de una etiqueta
+etiquetaTitulo.textContent="rojo vos no existis"
+etiquetaMenu.textContent="Goku"
 
+//Controlando una foto
+let etiquetaFoto = document.getElementById("fotogoku")
+etiquetaFoto.src="img/logo.png"
 
-
-//SALIDAS
-console.log("Buenas")
-console.log(nombreProducto)
-console.log("Su nombre es: "+NOMBRE_CLIENTE+" y su producto es: "+nombreProducto)
-console.log(`Su nombre es: ${NOMBRE_CLIENTE} y su producto es: ${nombreProducto}`)
-console.log("*************")
-console.log(productos)
-console.log(productos2[0])
+//Cambiar el estilo de la etiqueta
+etiquetaTitulo.classList.add("text-center")
+etiquetaTitulo.classList.add("text-danger")
