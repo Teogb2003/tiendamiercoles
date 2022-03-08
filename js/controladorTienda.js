@@ -14,7 +14,7 @@ etiquetaMenu.textContent="Goku"
 
 //Controlando una foto
 let etiquetaFoto = document.getElementById("fotogoku")
-etiquetaFoto.src="img/logo.png"
+etiquetaFoto.src="img/goku.jpg"
 
 //Cambiar el estilo de la etiqueta
 etiquetaTitulo.classList.add("text-center")

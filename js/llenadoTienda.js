@@ -14,4 +14,10 @@ let productos=[
    {nombre:"monopoly edición dbz",precio:70000,descripcion:"juego de mesa monopoly edición dbz"},
    {nombre:"PS4 FAT skin dbz",precio:2500000,descripcion:"PS4 FAT 500gb personalizada con 2 mandos"}
 ]
-console.log(productos)
+
+//COMO RECORRER UN ARREGLO CON JS
+//1. TENER UN ARREGLO 
+productos.forEach(function(producto){
+   console.log(producto.nombre)
+   console.log(producto.precio)
+})
