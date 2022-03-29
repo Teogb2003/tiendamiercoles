@@ -22,9 +22,9 @@ console.log(productos)
 //1.Creo una variable para almacenar la base sobre la cual voy a pintar
 let fila=document.getElementById("fila")
 productos.forEach(function(producto){
-   console.log(producto.nombre)
-   console.log(producto.precio)
-   console.log(producto.foto)
+   //console.log(producto.nombre)
+   //console.log(producto.precio)
+   //console.log(producto.foto)
 
    //Pintando etiquetas
    
@@ -84,9 +84,48 @@ productos.forEach(function(producto){
 
    
 })
+
+
+//Rutina para ampliar información del producto
+let filaContenedora = document.getElementById("fila")
+filaContenedora.addEventListener("click",function(evento){
+   
+   if(evento.target.classList.contains("btn")){
+
+      //console.log(evento.target.parentElement.querySelector("h2").textContent)
+      //console.log(evento.target.parentElement.querySelector("img").src)
+
+      let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
+      modalinfo.show()
+
+      let nombre=document.getElementById("tituloinfo")
+      nombre.textContent=evento.target.parentElement.querySelector("h2").textContent 
+
+      let fotoinfo=document.getElementById("fotoinfo")
+      fotoinfo.src=evento.target.parentElement.querySelector("img").src
+
+      let descripcioninfo=document.getElementById("descripcioninfo")
+      descripcioninfo.textContent=evento.target.parentElement.querySelector("h4").textContent
+
+      let precioinfo=document.getElementById("precioinfo")
+      precioinfo.textContent=evento.target.parentElement.querySelector("h3").textContent
+          
+      
+   }
+})
+
+
+
+
+
+
+
+
+
 //COMO RECORRER UN ARREGLO CON JS
 //1. TENER UN ARREGLO 
 /*productos.forEach(function(producto){
    console.log(producto.nombre)
    console.log(producto.precio)
 })*/
+
