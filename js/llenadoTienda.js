@@ -1,5 +1,7 @@
 //creando un arreglo de objetos
 
+export function llenarTienda(){
+
 let productos=[
 
 
@@ -84,35 +86,36 @@ productos.forEach(function(producto){
 
    
 })
+}
 
 
-//Rutina para ampliar información del producto
-let filaContenedora = document.getElementById("fila")
-filaContenedora.addEventListener("click",function(evento){
+
+
+
+
+
+
+
+
    
-   if(evento.target.classList.contains("btn")){
 
-      //console.log(evento.target.parentElement.querySelector("h2").textContent)
-      //console.log(evento.target.parentElement.querySelector("img").src)
 
-      let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
-      modalinfo.show()
 
-      let nombre=document.getElementById("tituloinfo")
-      nombre.textContent=evento.target.parentElement.querySelector("h2").textContent 
 
-      let fotoinfo=document.getElementById("fotoinfo")
-      fotoinfo.src=evento.target.parentElement.querySelector("img").src
 
-      let descripcioninfo=document.getElementById("descripcioninfo")
-      descripcioninfo.textContent=evento.target.parentElement.querySelector("h4").textContent
 
-      let precioinfo=document.getElementById("precioinfo")
-      precioinfo.textContent=evento.target.parentElement.querySelector("h3").textContent
-          
-      
-   }
-})
+
+
+   
+
+
+   
+
+
+
+
+
+
 
 
 

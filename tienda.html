@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     
 </head>
 <body background="img/casa.webp">
@@ -31,6 +31,14 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="index.html">Página web</a></li>                
                     </ul>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav_link" href="#">  
+                    <i class="bi bi-cart-plus-fill position-absolute end-0" style="color: white; font-size: 30px; "></i>
+                    <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
+                      99+
+                    </span>
+                    </a>
                   </li>
                 </ul>
                 <form class="d-flex">
@@ -69,17 +77,23 @@
                   <div class="col-4">
                     <img src="" alt="" class="w-100 img-fluid" id="fotoinfo">
                   </div>
+
                   <div class="col-8">
                      <h3 class="text-center" id="tituloinfo" style="font-style: italic; color: red;"></h3>
                      <p  class="text-center" id="descripcioninfo" style="font-size: larger; font-style: italic; color: black;"></p>
                      <h4 class="text-center" id="precioinfo" style="color: red; font-style: italic;"></h4>
+                     <div class="mb-3">
+                      <label class="form-label" style="font-style: italic; color: red;">Cantidad</label>
+                      <input type="number" class="form-control" id="cantidadProducto">
+                    </div>
+
                   </div>
                 </div>
               </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" style="font-style: italic;" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-danger" style="font-style: italic;">Añadir al carrito</button>
+              <button id="botonadd" type="button" class="btn btn-danger" style="font-style: italic;">Añadir al carrito</button>
             </div>
           </div>
         </div>
@@ -127,6 +141,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="js/llenadoTienda.js"></script>
+    <script src="js/controlador.js" type="module"></script>
 </body>
 </html>
