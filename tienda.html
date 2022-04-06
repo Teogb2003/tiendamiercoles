@@ -33,9 +33,9 @@
                     </ul>
                   </li>
                   <li class="nav-item">
-                  <a class="nav_link" href="#">  
+                  <a class="nav_link" href="#" id="vercarrito">  
                     <i class="bi bi-cart-plus-fill" style="color: white; font-size: 30px; position: relative; left: 1250px;"></i>
-                    <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
+                    <span id="capsula" class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible" style="position: relative; left: 1550px;">
                       99+
                     </span>
                     </a>
@@ -83,19 +83,47 @@
                      <h4 class="text-center" id="precioinfo" style="color: red; font-style: italic;"></h4>
                      <div class="mb-3">
                       <label class="form-label" style="font-style: italic; color: red;">Cantidad</label>
-                      <input type="number" min="1" class="form-control" id="cantidadProducto">
+                      <input type="number"  min="1" value="1" class="form-control" id="cantidadProducto">
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" style="font-style: italic;" data-bs-dismiss="modal" id="limpiar">Limpiar</button>
               <button type="button" class="btn btn-secondary" style="font-style: italic;" data-bs-dismiss="modal">Cerrar</button>
-              <button id="botonadd" type="button" class="btn btn-danger" style="font-style: italic;" data-bs-dismiss="modal">Añadir al carrito</button>
+              <button id="botonadd" type="button" class="btn btn-danger" style="font-style: italic;">Añadir al carrito</button>
             </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <section>
+      button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch demo modal
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="resumencompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="font-style: italic; color: red">Tienda DBZ</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container" id="basecarro">
+              
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="font-style: italic;" >Cerrar</button>
+            <button type="button" class="btn btn-danger" style="font-style: italic;">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     </section>
        
     <footer class="bg-dark">

@@ -6,14 +6,17 @@ let producto={}
 
 //llamando a tienda llenado
 llenarTienda()
+//referencia al modal
+let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
+let modacompra = new bootstrap.Modal(document.getElementById('resumencompra'))
+
 
 //Rutina para ampliar información
 let filaContenedora = document.getElementById("fila")
 filaContenedora.addEventListener("click",function(evento){
 
     if(evento.target.classList.contains("btn")){
-             
-    let modalinfo = new bootstrap.Modal(document.getElementById('modalinfo'))
+
     producto=ampliarInformacionProducto(evento)
     console.log(producto)
     modalinfo.show()
@@ -25,8 +28,70 @@ let carrito=[]
 let botonAgregarCarrito=document.getElementById("botonadd")
 botonAgregarCarrito.addEventListener("click",function(){
 
+    //Capturar cantidad y agregarla al producto
+    let cantidad = document.getElementById("cantidadProducto").value
+    producto.cantidad=cantidad
+
+    //Agrego al carrito
     carrito.push(producto)
+
+    //Pintar la capsula en el carrito
+    let suma=0
+    carrito.forEach(function(producto){
+        suma=suma+Number(producto.cantidad)
+    })
+    
+    let capsula=document.getElementById("capsula")
+    capsula.textContent=suma
+    capsula.classList.remove("invisible")
+
     console.log(carrito)
 
+    modalinfo.hide();
 
+
+})
+
+//Rutina para limpiar
+let limpiar=document.getElementById("limpiar")
+limpiar.addEventListener("click",function(){
+    
+    carrito=[]
+    let capsula=document.getElementById("capsula")
+    capsula.classList.add("invisible")
+})
+
+//Rutina para ver el carrito
+let botonVerCarrito=document.getElementById("vercarrito")
+botonVerCarrito.addEventListener("click",function(){
+
+    //recorrer el carrito y pintar los productos
+ 
+    base.innerHTML=""
+
+    let base=document.getElementById("basecarro")
+
+    carrito.forEach(function(producto){
+
+        let fila = document.createElement("div")
+        fila.classList.add("row")
+        
+        let columna1=document.createElement("div")
+        columna1.classList.add("col-4")
+
+        let columna2=document.createElement("div")
+        columna2.classList.add("col-8")
+
+        let foto=document.createElement("img")
+        foto,classList.add("w-100","img-fluid")
+        foto.src=producto.foto
+
+        //PADRES E HIJOS
+        columna1.appendChild(foto)
+        fila.appendChild(columna1)
+        fila.appendChild(columna2)
+        base.append(fila)
+    })
+      
+    modacompra.show();
 })
