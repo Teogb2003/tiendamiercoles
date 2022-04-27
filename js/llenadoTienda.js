@@ -58,7 +58,6 @@ productos.forEach(function(producto){
     precio.classList.add("text-center")
     precio.classList.add("text-danger")
     precio.classList.add("fst-italic")
-    precio.textContent="$"
     precio.textContent=producto.precio
 
     //Descripición

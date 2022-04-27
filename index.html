@@ -47,25 +47,7 @@
       </nav>
     </header>
 
-    <section>
-
-      <form>
-       <div class="mb-3">
-         <label  class="form-label">Email</label>
-         <input type="email" class="form-control" id="email">
-       </div>
-
-       <div class="mb-3">
-         <label  class="form-label">Password</label>
-         <input type="password" class="form-control" id="password">
-       </div>
-
-       <button type="submit" class="btn btn-primary w-100" id="botonregistro">Registro</button>
-
-
-      </form>
-
-   </section>
+   
 
     <main>
         
@@ -77,16 +59,47 @@
               <div class="col-8 align-self-center">
                   <h3 id="biografia" style="color: red; font-style:italic;" >GOKU EL SUPER SAIYAN</h3>
                   <p style="font-size:30px; font-style: italic;">Son Goku es un saiyan natal del planeta Vegeta cuyo verdadero nombre es Kakarotto. Nació en el año 737 justo cuando su padre Barduck luchaba contra la tiranía de Freezer. En sus primeros días logró alcanzar las dos unidades de fuerza de combate, un nivel superior a la media humana.</p>
-                   </div>
+                  <button class="btn btn-danger btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="position: relative; left: 2px; bottom: 8px; font-style: italic; font-size: larger;">¡Registrate Ahora!</button>
+
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                      <h5 id="offcanvasRightLabel" style="font-style: italic; color: red;">Login</h5>
+                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      
+                      <section>
+              
+                        <div class="row justify-content-center my-5">
+                          <div class="col-10">
+                  
+                            <form>
+                              <div class="mb-3">
+                                <label  class="form-label" style="font-style: italic;">Email</label>
+                                <input type="email" class="form-control" id="email">
+                              </div>
+                       
+                              <div class="mb-3">
+                                <label  class="form-label" style="font-style: italic;">Password</label>
+                                <input type="password" class="form-control" id="password">
+                              </div>
+                       
+                              <button type="submit" class="btn btn-danger w-100" id="botonregistro" style="font-style: italic;">Registro</button>
+                       
+                             </form>
+                          </div>
+                        </div>
+                     </section>
+                    </div>
+                  </div>
+              </div>
 
               <div class="col-4" class="float-left">
                   <img src="img/logo2.png" alt="fotodbz2" class="w-100 img-fluid" id="logo">
               </div>
-
               </div>
             </div>
       </section>
-
     </main>
 
     <section>
