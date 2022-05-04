@@ -47,6 +47,9 @@ botonAgregarCarrito.addEventListener("click",function(){
     capsula.textContent=suma
     capsula.classList.remove("invisible")
 
+    let total = document.getElementById("totalinfo")
+    total.classList.remove("invisible")
+
     console.log(carrito)
 
     modalinfo.hide();
@@ -61,6 +64,9 @@ limpiar.addEventListener("click",function(){
     carrito=[]
     let capsula=document.getElementById("capsula")
     capsula.classList.add("invisible")
+
+    let total = document.getElementById("totalinfo")
+    total.classList.add("invisible")
 })
 
 
@@ -135,7 +141,16 @@ botonVerCarrito.addEventListener("click",function(){
 
         botondolar.addEventListener("click", function(){
             let usd = 1 * totalCop / 4000
-            total.textContent = "El total en dolares estadounidenses es: $"+usd + " USD"
+            total.textContent = "El total en dolares americanos es: $"+usd + " USD"
+        })
+
+        let botonpesos = document.getElementById("COP")
+
+        botonpesos.addEventListener("click", function(){
+            let cop = totalCop
+            total.classList.add("fst-italic")
+            total.classList.add("text-danger")
+            total.textContent = "El total en pesos colombianos es: $"+cop + " COP"
         })
 
 
