@@ -63,6 +63,7 @@ limpiar.addEventListener("click",function(){
     capsula.classList.add("invisible")
 })
 
+
 //Rutina para ver el carrito
 let botonVerCarrito=document.getElementById("vercarrito")
 botonVerCarrito.addEventListener("click",function(){
@@ -77,12 +78,16 @@ botonVerCarrito.addEventListener("click",function(){
 
         let fila = document.createElement("div")
         fila.classList.add("row")
+
+        let fila2 = document.createElement("div")
+        fila2.classList.add("row")
         
         let columna1=document.createElement("div")
         columna1.classList.add("col-4")
 
         let columna2=document.createElement("div")
         columna2.classList.add("col-8")
+
 
         let foto=document.createElement("img")
         foto.classList.add("w-100","img-fluid")
@@ -110,7 +115,28 @@ botonVerCarrito.addEventListener("click",function(){
         subtotal.classList.add("text-center")
         subtotal.classList.add("text-danger")
         subtotal.classList.add("fst-italic")
-        subtotal.textContent="Subtotal: $"+producto.precioinfo * producto.cantidad
+        let resultado = Number(producto.precioinfo) * Number(producto.cantidad)
+        subtotal.textContent ="Subtotal: $"+ resultado;
+
+
+        let totalCop = 0
+        carrito.forEach(function (producto){
+        totalCop = totalCop + Number(producto.precioinfo * producto.cantidad)
+        })
+
+
+        let total =document.getElementById("totalinfo")
+        total.classList.add("fst-italic")
+        total.classList.add("text-danger")
+        total.textContent = "El total en pesos colombianos es: $"+totalCop + " COP"
+
+       
+        let botondolar = document.getElementById("dolares")
+
+        botondolar.addEventListener("click", function(){
+            let usd = 1 * totalCop / 4000
+            total.textContent = "El total en dolares estadounidenses es: $"+usd + " USD"
+        })
 
 
         //PADRES E HIJOS
